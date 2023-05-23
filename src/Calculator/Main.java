@@ -5,8 +5,7 @@ import java.util.Scanner;
 import static Calculator.Convert.convert;
 import static Calculator.Convert.convertToRoman;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
 public class Main {
     static char operator; // Инициализация переменных с 11 - 14 строки
     static int firstNumber;
