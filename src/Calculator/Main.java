@@ -12,14 +12,14 @@ public class Main {
     static int secondNumber;
     static boolean firstRomanNumber = false, secondRomanNumber = false;
 
-    // Точка входа,выбрасывает исключения
+    // Точка входа в программу,выбрасывает исключения (в данном случае обработка ошибок)
 
     public static void main(String args[]) throws Exception {
-        Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in); // инициализируется объект типа сканер,объявляется с помощью слова new
         System.out.print("Введите число1 математический оператор(+-/*) число2 ");
         String input = scan.nextLine(); // Метод сканирует введенные строки
 
-        convert(input); // вызываем метод конвертер,на вход ему идет идет переменная инпат,результат сканирования строки
+        convert(input); // вызываем метод конвертер,на вход ему идет переменная инпат,результат сканирования строки
         Integer result = calculate(); // записывается результат выполнения метода калькулятор
 
         // если результат выполнения не равен нулю,то выполняется следующая логика
@@ -61,12 +61,11 @@ public class Main {
                     result = firstNumber / secondNumber;
                     break;
 
-                // operator doesn't match any case constant (+, -, *, /)
-                default:
+                default: // случай по умолчанию
                     throw new Exception("неправильный математический оператор");
             }
 
-            return result;
+            return result; // возврат значения из метода
         } else {
             throw new Exception("Оба числа должны быть римскими,либо целочисленными");
         }
